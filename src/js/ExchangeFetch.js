@@ -1,3 +1,4 @@
+import $ from 'jquery'
 export default class ExchangeFetch {
 
   static async currencyCall() {
@@ -14,10 +15,7 @@ export default class ExchangeFetch {
   }
 
   static getElements(response, money, currency) {
-    console.log(response);
-    console.log(response.conversion_rates[currency]);
-    console.log(money);
-    console.log((parseFloat(money)*response.conversion_rates[currency]).toFixed(2));
+    $('#output').text((parseFloat(money)*response.conversion_rates[currency]).toFixed(2));
   }
 
   static async makeApiCall(money, currency) {
