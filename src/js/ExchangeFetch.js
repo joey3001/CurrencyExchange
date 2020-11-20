@@ -1,0 +1,2 @@
+export Default class ExchangeFetch {
+}
