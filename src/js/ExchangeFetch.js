@@ -3,7 +3,7 @@ export default class ExchangeFetch {
 
   static async currencyCall() {
     try { 
-      const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+      const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD/`);
       if (!response.ok) {
         throw Error(response.statusText); 
       }
@@ -15,7 +15,13 @@ export default class ExchangeFetch {
   }
 
   static getElements(response, money, currency) {
+    if (response.conversion_rates) {
     $('#output').text((parseFloat(money)*response.conversion_rates[currency]).toFixed(2));
+    }
+    else {
+    console.log(response);
+    $('#output').text(`There was the following error: ${response}`);
+    }
   }
 
   static async makeApiCall(money, currency) {
