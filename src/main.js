@@ -4,4 +4,4 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeFetch from './js/ExchangeFetch.js';
 
-ExchangeFetch.currencyCall(); 
+ExchangeFetch.makeApiCall(); 
