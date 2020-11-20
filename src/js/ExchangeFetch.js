@@ -2,11 +2,11 @@ export default class ExchangeFetch {
 
   static async currencyCall() {
     try { 
-      const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+      const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/EUR`);
       if (!response.ok) {
         throw Error(response.statusText); 
       }
-      return response.json;
+      return response.json();
     } 
     catch(error) {
       return(error.message);
@@ -14,12 +14,11 @@ export default class ExchangeFetch {
   }
 
   static getElements(response) {
-    console.log(response); 
+    console.log(response);
   }
 
   static async makeApiCall() {
     const response = await ExchangeFetch.currencyCall();
-    console.log(response);
     ExchangeFetch.getElements(response); 
   }
 }
