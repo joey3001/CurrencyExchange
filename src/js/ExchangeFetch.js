@@ -3,7 +3,7 @@ export default class ExchangeFetch {
 
   static async currencyCall() {
     try { 
-      const response = await fetch (`https://v6.exchangerate-api.com/v6/c1aad328c7c9d64394703176/latest/USD`);
+      const response = await fetch (`https://v6.exchangerate-api.com/v6/c1aad328c7c9d64394703176/latest/USD/blahhhh`);
       if (!response.ok) {
         throw Error(response.statusText); 
       }
@@ -24,7 +24,6 @@ export default class ExchangeFetch {
       }
     }
     else if (typeof(response) === 'object') {
-      console.log(response);
       $('#output').text(`There was the following error: ${response['error-type']}`)
     }
     else {
