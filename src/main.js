@@ -8,6 +8,6 @@ import ExchangeFetch from './js/ExchangeFetch.js';
 $('#exchange').submit(function() {
   event.preventDefault(); 
   let money = $('#money').val(); 
-  console.log(money);
-  ExchangeFetch.makeApiCall();
+  let currency = $('#alternateCurrency').val();
+  ExchangeFetch.makeApiCall(money, currency);
 }) 
