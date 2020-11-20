@@ -17,6 +17,7 @@ export default class ExchangeFetch {
     console.log(response);
     console.log(response.conversion_rates[currency]);
     console.log(money);
+    console.log((parseFloat(money)*response.conversion_rates[currency]).toFixed(2));
   }
 
   static async makeApiCall(money, currency) {
