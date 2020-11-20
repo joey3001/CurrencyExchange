@@ -15,8 +15,8 @@ export default class ExchangeFetch {
 
   static getElements(response, money, currency) {
     console.log(response);
+    console.log(response.conversion_rates[currency]);
     console.log(money);
-    console.log(currency);
   }
 
   static async makeApiCall(money, currency) {
