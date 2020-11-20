@@ -3,7 +3,8 @@ export default class ExchangeFetch {
 
   static async currencyCall() {
     try { 
-      const response = await fetch (`https://v6.exchangerate-api.com/v6/c1aad328c7c9d64394703176/latest/USD/blahhhh`);
+      const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+      console.log(response);
       if (!response.ok) {
         throw Error(response.statusText); 
       }
@@ -17,7 +18,7 @@ export default class ExchangeFetch {
   static getElements(response, money, currency) {
     if (response.conversion_rates) {
       if (response.conversion_rates[currency]) {
-        $('#output').text((parseFloat(money)*response.conversion_rates[currency]).toFixed(2));
+        $('#output').text('The exchanged value is: ' + (parseFloat(money)*response.conversion_rates[currency]).toFixed(2));
       }
       else {
         $('#output').text('That is not a currency supported by this application. Please try another currency');
