@@ -1,7 +1,13 @@
-//import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeFetch from './js/ExchangeFetch.js';
 
-ExchangeFetch.makeApiCall(); 
+
+$('#exchange').submit(function() {
+  event.preventDefault(); 
+  let money = $('#money').val(); 
+  console.log(money);
+  ExchangeFetch.makeApiCall();
+}) 
