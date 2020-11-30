@@ -29,6 +29,7 @@ export default class ExchangeFetch {
     else {
       $('#output').text(`There was the following error: ${response}`);
     }
+    $('#output').fadeIn('slow');
   }
 
   static async makeApiCall(money, currency) {

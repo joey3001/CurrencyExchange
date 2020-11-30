@@ -14,8 +14,16 @@ label {
 }
 
 #output {
-  margin-top: 10%;
   font-weight: bold;
+  background-color: skyblue; 
+  border: 1px solid grey; 
+  border-radius: 10px; 
+  text-align: center; 
+  margin: auto; 
+  margin-top: 4.5%;
+  padding-top: 5%; 
+  padding-bottom: 5%; 
+  display: none; 
 }
 
 .btn { 
