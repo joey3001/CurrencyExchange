@@ -23,7 +23,10 @@ label {
   margin-top: 4.5%;
   padding-top: 5%; 
   padding-bottom: 5%; 
+  padding-left: 2%;
+  padding-right: 2%;
   display: none; 
+  font-size: 120%
 }
 
 .btn { 
