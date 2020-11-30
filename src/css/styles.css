@@ -1,12 +1,10 @@
 body {
-  background-color: floralwhite;
+  background-color: rgb(45, 9, 108);
+  font-family: monospace;
+  font-size: 110%
 }
 
 #exchange {
-  margin-top: 3%;
-}
-
-button {
   margin-top: 3%;
 }
 
@@ -21,8 +19,17 @@ label {
 }
 
 .btn { 
-  margin-top: 3%; 
+  margin-top: 3%;
+  margin-left: 5%;
   font-weight: bold;
   background-color: lightgrey;
   border-color: black;
+}
+
+.col-5 {
+  border: 1px solid grey; 
+  border-radius: 10px; 
+  margin: auto;
+  padding-bottom: 2%;
+  background-color: skyblue;
 }
