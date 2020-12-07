@@ -1,7 +1,4 @@
-import getElements from './UI_Logic.js'; 
-
 export default class ExchangeFetch {
-
   static async currencyCall() {
     try { 
       const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
@@ -13,11 +10,6 @@ export default class ExchangeFetch {
     catch(error) {
       return error.message;
     }
-  }
-
-  static async makeApiCall(money, currency) {
-    const response = await ExchangeFetch.currencyCall();
-    getElements(response, money, currency); 
   }
 }
 
