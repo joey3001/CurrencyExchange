@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeFetch from './js/ExchangeFetch.js';
 
-
 $('#exchange').submit(function() {
   event.preventDefault(); 
   let money = $('#money').val(); 
