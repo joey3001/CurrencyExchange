@@ -1,4 +1,5 @@
 import getElements from './UI_Logic.js'; 
+
 export default class ExchangeFetch {
 
   static async currencyCall() {

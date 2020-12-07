@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 export default function getElements(response, money, currency) {
   if (response.conversion_rates) {
     if (response.conversion_rates[currency]) {
